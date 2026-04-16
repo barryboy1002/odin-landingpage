@@ -1,0 +1,155 @@
+.header{
+    background-color: #1f2937;
+    font-family: 'Arial', sans-serif;
+        
+}
+#headtitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.header_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.logo{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.introductorytext{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 560px;
+    padding : 5px;
+    font: Roboto, sans-serif;
+}
+.introductorytext h1{
+    color: white;
+    font-size: 48px;
+    margin: 0;
+}
+.introductorytext p{
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+}
+.headerimg{
+    width: 400px;
+    height: auto;
+    object-fit: scale-down;
+    padding : 5px;
+    border-radius: 8px;
+}
+button{
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+ul  {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    gap: 20px;
+}
+.TopSchools{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.TopSchools h2{
+    color: #1f2937;
+    font-size: 36px;
+    margin: 0;
+}
+
+
+.schoolcards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+.schoolcard{
+    flex: 0 1 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #fff;
+    padding: 0;
+    border-radius: 12px;
+    border: 3px solid #2563eb;
+    overflow: hidden;
+}
+.schoolcard h3{
+    font-size: 14px;
+    margin: 12px 12px 8px 12px;
+    color: #1f2937;
+}
+.schoolcard p{
+    font-size: 12px;
+    margin: 0 12px 12px 12px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+.schoolimg{
+    width: 100%;
+    height: 100px;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
+}
+.whychoose{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #E5E7EB;
+    font-size: 36px;
+    padding: 20px;
+    color: #1f2937;
+}
+.Contact{
+    display: flex;
+    background: linear-gradient(135deg, #2563eb, #1f2937);
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+.Contact p{
+    margin: 0;
+}
+.Contact button{
+    background-color: white;
+    color: #2563eb;
+    font-weight: bold;
+}
+.footer{
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.footer p{
+    margin: 0;
+}
