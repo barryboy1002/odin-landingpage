@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css">
+  <title>Document</title>
 </head>
-<body>
-
-<div class="container">
-  <nav class="sidebar">
-    <h1 class="logo">Dashboard</h1>
-    <ul class="nav-links">
-      <li>Home</li>
-      <li>Profile</li>
-      <li>Messages</li>
-      </ul>
+<body class="dashboard-body">
+  <aside class="sidebar" id="sidebar">
+    <div class ="AdminDashboard">
+      <img src="">
+      <span>Dashboard</span>
+    </div>   
+  
+  <nav class="navbar">
+    <a href="#" class ="nav-item">
+      <span>Home</span>
+    </a>
+    <a href="#" class ="nav-item">
+      <span>Profile</span>
+    </a>
+    <a href="#" class ="nav-item">
+      <span>Messages</span>
+    </a>
+    <a href="#" class ="nav-item">
+      <span>History</span>
+    </a>
+    <a href="#" class ="nav-item">
+      <span>Tasks</span>
+    </a>
+    <a href="#" class ="nav-item">
+      <span>Communities</span>
+    </a>
+    <br><br><br>
+    <a href="#" class ="nav-item">
+      <span>Settings</span>
+    </a>
+    <a href="#" class ="nav-item">
+      <span>Support</span>
+    </a>
+    <a href="#" class ="nav-item">
+      <span>Privacy</span>
+    </a>
   </nav>
-
-  <header class="header">
-    <div class="search-bar">
-      <input type="text" placeholder="Search...">
-    </div>
-    <div class="user-actions">
-      <button class="btn primary">New</button>
-      <button class="btn primary">Upload</button>
-      <button class="btn primary">Share</button>
-    </div>
-  </header>
-
-  <main class="content">
-    <section class="projects">
-      <h2>Your Projects</h2>
-      <div class="project-grid">
-        <div class="card">
-          <h3>Super Cool Project</h3>
-          <p>Sed tempus ut lacus ut scelerisque...</p>
+  </aside>
+  <div class="main_sec" >
+    <header>
+      <div class="upperpart">
+        <i></i><input type="text" name="search"><i></i>
+        <div><i></i><span>Morgan Stanley</span></div>
+      </div>
+    </header>
+    <main class="mbody">
+      <h3>Your Projects</h3>
+      <div class="main_items">
+        <div class="main_item">
+          <div class="card-title">Super Cool Project</div>
+        <div class = "card-description">Really cool Stuff I hope.</div>
         </div>
+        <div class="main_item">
+          <div class="card-title">Impossible App</div>
+          <div class="card-description">I really do not no Man I hope</div>
         </div>
-    </section>
-
-    <aside class="widgets">
-      <div class="widget-box">
-        <h3>Announcements</h3>
+        <div class="main_item">
+          <div class ="card-title">Better Project</div>
+          <div class="card-description">What is happening man why are we like this</div>
         </div>
-      <div class="widget-box">
-        <h3>Trending</h3>
+        <div class="main_item">
+          <div class ="card-title">Greater App</div>
+          <div class="card-description">Cool stuff I hope this ends well</div>
         </div>
-    </aside>
-  </main>
-</div>
+      </div>
+    </main>
+    <aside></aside>
+    <footer></footer>
+  </div>
 </body>
 </html>

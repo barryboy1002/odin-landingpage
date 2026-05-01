@@ -1,0 +1,245 @@
+/* ── Tokens ───────────────────────────── */
+:root {
+  --bg: #f0ede8;
+  --surface: #fffdf9;
+  --card-bg: #ffffff;
+  --accent: #2d6a4f;
+  --accent-hover: #1b4332;
+  --danger: #c0392b;
+  --danger-hover: #96281b;
+  --text-primary: #1a1a1a;
+  --text-muted: #666;
+  --border: #ddd;
+  --shadow: 0 4px 24px rgba(0,0,0,0.10);
+  --radius: 10px;
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+
+/* ── Base ─────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.libbody {
+  background-color: var(--bg);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  padding: 40px 24px;
+}
+
+/* ── Heading ──────────────────────────── */
+h1 {
+  color: var(--text-primary);
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px; /* ✅ was missing semicolon */
+}
+
+/* ── Add button ───────────────────────── */
+#new-book {
+  display: block;
+  margin: 0 auto 36px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-family: var(--font-body);
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+#new-book:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* ── Book list & cards ────────────────── */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.book-item {
+  background-color: var(--card-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  width: calc(50% - 20px);
+  min-height: 130px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.book-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+/* ── Overlay ──────────────────────────── */
+.overlay-container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ✅ Fixed: was broken markdown link */
+.overlay-container.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* ── Popup box ────────────────────────── */
+
+/* ✅ Fixed: was .popup-box but HTML has id="popup-b" */
+#popup-b {
+  background: var(--surface);
+  padding: 32px 28px 24px;
+  border-radius: 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+  width: 360px;
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+#popup-b h2 {
+  color: var(--accent);
+  font-family: var(--font-heading);
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+}
+
+/* ── Form ─────────────────────────────── */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+
+.form-label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-input {
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.15);
+}
+
+/* Tighten the checkbox row */
+.input-field:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.input-field:has(input[type="checkbox"]) .form-input {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--accent);
+  transform: scale(1.3);
+}
+
+/* ── Buttons ──────────────────────────── */
+.btn-submit,
+.btn-close-popup {
+  padding: 11px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.btn-submit {
+  background-color: var(--accent);
+  color: #fff;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-close-popup {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  background-color: transparent;
+  color: var(--danger);
+  border: 1.5px solid var(--danger); /* ✅ distinct from submit */
+}
+
+.btn-close-popup:hover {
+  background-color: var(--danger); /* ✅ red on hover, not green */
+  color: #fff;
+}
+
+/* ── Animation ────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.delete-item{
+    border-radius: 50%;
+    content:url(trash.webp);
+    width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%; /* Makes it a circle */
+  background-color: #007bff;
+  color: white;
+  cursor: pointer; /* Ensures it looks clickable */
+  padding: 0
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="book.js" defer></script>
+    <link rel="stylesheet" href="book.css">
+    <title>My Library</title>
+</head>
+<body class="libbody">
+    <h1>My Library</h1>
+    <div class="book-list"></div>
+    <button id="new-book" onclick="openForm()">Add</button>
+
+    <div id="popupOverlay" class="overlay-container">
+        <div id="popup-b">
+            <h2 style="color: green;">Add a Book</h2>
+            <form action="" class="form-container">
+
+                <div class="input-field">
+                    <label class="form-label" for="title">Book Title</label>
+                    <input class="form-input" type="text"
+                        id="title" name="title" required>
+                </div>
+
+                <div class="input-field">
+                    <label class="form-label" for="author">Author</label>
+                    <!-- ✅ Fixed: added id="author" -->
+                    <input class="form-input" type="text"
+                        id="author" name="author" required>
+                </div>
+
+                <div class="input-field">
+                    <!-- ✅ Fixed: added label text and id, changed type to number -->
+                    <label class="form-label" for="year">Year Published</label>
+                    <input class="form-input" type="number"
+                        id="year" name="year" min="1000" max="2100">
+                </div>
+
+                <div class="input-field">
+                    <label class="form-label" for="read">Read?</label>
+                    <!-- ✅ Fixed: added id="read" -->
+                    <input class="form-input" type="checkbox"
+                        id="read" name="read">
+                </div>
+
+                <button class="btn-submit" type="submit" id="submitBook">
+                    Submit
+                </button>
+            </form>
+
+            <button class="btn-close-popup" onclick="openForm()">
+                Close
+            </button>
+        </div>
+    </div>
+</body>
+</html>
