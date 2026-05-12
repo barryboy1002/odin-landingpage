@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+    function fibs(n) {
+        console.log("This was printed recursively");
+
+        if (n ===0 )return [0];
+        if (n === 1) return [0, 1];
+
+        const arr  = fibs(n-1);
+        arr.push(arr[arr.length -1]+ arr[arr.length -2])
+        return arr;
+    }
+
+    fibs(5);
+    console.log(fibs(10));
+   </script>
+</body>
+</html>
