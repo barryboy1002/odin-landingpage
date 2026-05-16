@@ -1,0 +1,33 @@
+00:00 - Roadmap intro
+02:22 - A high-level understanding
+02:51 - HTTP protocol
+04:25 - Routing
+05:04 - Serialisation and deserialisation
+07:13 - Authentication and authorisation
+08:45 - Validation and transformation
+12:03 - Middlewares
+14:03 - Request context
+15:28 - Handlers, controllers and services
+15:45 - CRUD deepdive
+16:33 - RESTful architecture and best practices
+17:08 - Databases
+17:44 - Business logic layer (BLL)
+18:51 - Caching
+20:04 - Transactional emails
+20:19 - Task queuing and scheduling
+21:35 - Elasticsearch
+22:33 - Error handling
+23:16 - Config management
+24:07 - Logging, monitoring and observability
+25:13 - Graceful shutdown
+25:50 - Security
+26:23 - Scaling and performance
+27:36 - Concurrency and parallelism
+27:47 - Object storage and large files
+27:59 - Real-time backend systems
+28:06 - Testing and code quality
+28:50 - 12 factor app
+28:55 - OpenAPI standards
+29:58 - Webhooks
+30:39 - DevOps for backend engineers
+
