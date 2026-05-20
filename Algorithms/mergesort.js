@@ -32,4 +32,6 @@ function merge(left,right){
 }
 
 
-console.log(mergeSort([3, 2, 1, 13, 8, 5, 0, 1]));
+
+
+export {mergeSort}
