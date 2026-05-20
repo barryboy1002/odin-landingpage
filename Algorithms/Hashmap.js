@@ -74,7 +74,7 @@ class HashMap{
                 if(current.value.key === key){
                     return true;
                 }
-                current = current.nxt_pointer;
+                current = current.nxt_pointer;  
             }
         
 
@@ -85,23 +85,20 @@ class HashMap{
     }
     remove(key){
         const index  = this.hash(key);
-        if(this.has(key)){
-            const bucket = this.theArray[index];
-            let current  = bucket.hd;
-            let i = 0 ;
-            while(current != null){
-                if(current.value.key === key){
-                    bucket.removeAt(i);
-                    return true;
-                }
-                current = current.nxt_pointer;
-                i++;    
+        if(!(index in this.theArray)) return false;
+
+        const bucket = this.theArray[index];
+        let current = bucket.hd;
+        let i = 0;
+        while(current !== null){
+            if (current.value.key === key){
+                bucket.removeAt(i);
+                return true
             }
-                        
+            current = current.nxt_pointer;
+            i++;
         }
         return false;
-   
-
     }
     length(){
         let numberKeys = 0 ;
@@ -151,19 +148,5 @@ class HashMap{
 }
 
 
-const test = new HashMap();
-test.set('apple', 'red');
-test.set('banana', 'yellow');
-test.set('carrot', 'orange');
+//TODO : add a resizing property
 
-console.log(test.length());           // 3
-console.log(test.keys());             // ['apple', 'banana', 'carrot'] (any order)
-console.log(test.values());           // ['red', 'yellow', 'orange'] (any order)
-console.log(test.entries());          // [['apple','red'], ...] (any order)
-
-console.log(test.remove('banana'));   // true
-console.log(test.remove('banana'));   // false
-console.log(test.length());           // 2
-
-test.clear();
-console.log(test.length());           // 0
