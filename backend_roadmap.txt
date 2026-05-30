@@ -1,6 +1,10 @@
 00:00 - Roadmap intro
 02:22 - A high-level understanding
+<<<<<<< HEAD
 02:51 - HT		ocol
+=======
+02:51 - HTTP protocol
+>>>>>>> e777c71118367e632419f0d4390e70099ef490da
 04:25 - Routing
 05:04 - Serialisation and deserialisation
 07:13 - Authentication and authorisation

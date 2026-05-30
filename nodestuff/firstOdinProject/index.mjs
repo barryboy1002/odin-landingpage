@@ -43,5 +43,5 @@ const server = createServer((request, response) =>{
 
 
 server.listen(port,host, () =>{
-    console.log(`Server running at http://${host}:${port}`);
+    console.log(`Server running at http://${host}:${port}/index`);
 })
